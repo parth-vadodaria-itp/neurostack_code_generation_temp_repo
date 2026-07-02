@@ -1,3 +1,2 @@
-# Python Calculator Application
-# No external dependencies required for core functionality
-# All operations use Python standard library
+# No external dependencies required for basic calculator
+# Python standard library (math module) is sufficient
