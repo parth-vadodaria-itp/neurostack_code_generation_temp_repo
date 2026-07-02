@@ -1,0 +1,3 @@
+# Python Calculator Application
+# No external dependencies required for core functionality
+# All operations use Python standard library
