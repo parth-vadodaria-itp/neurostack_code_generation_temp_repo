@@ -1,0 +1,2 @@
+# No external dependencies required for basic calculator
+# Python standard library (math module) is sufficient
