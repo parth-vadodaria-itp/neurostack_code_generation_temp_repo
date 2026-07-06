@@ -1,7 +1,7 @@
 # Hello World Java Program
 
 ## Overview
-A simple Java program that prints "Hello World" to the console.
+A simple Java program that prints "Hello World" followed by a system-generated greeting message to the console.
 
 ## Story
 - **Story ID**: KAN-79
@@ -16,7 +16,9 @@ A simple Java program that prints "Hello World" to the console.
 .
 ├── HelloWorld.java    # Main program file
 ├── README.md          # This file
-└── .gitignore         # Git ignore rules
+├── .gitignore         # Git ignore rules
+├── pom.xml            # Maven build configuration
+└── CONTRIBUTING.md    # Development guide
 ```
 
 ## How to Run
@@ -30,7 +32,7 @@ javac HelloWorld.java
 java HelloWorld
 ```
 
-### Option 2: Using Maven (if pom.xml is present)
+### Option 2: Using Maven
 ```bash
 # Compile
 mvn compile
@@ -42,6 +44,7 @@ mvn exec:java -Dexec.mainClass="HelloWorld"
 ## Expected Output
 ```
 Hello World
+This is the system generated greeting. Don't reply!
 ```
 
 ## Acceptance Criteria
@@ -58,7 +61,7 @@ Hello World
 This is a minimal Java program with:
 - One file: `HelloWorld.java`
 - One function: `printHelloWorld()`
-- Output: "Hello World"
+- Output: Two lines of text
 
 ## License
 Proprietary - My Software Team (KAN Project)

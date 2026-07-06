@@ -45,14 +45,16 @@
 ## Code Standards
 - Follow Java naming conventions
 - Keep the program simple and focused
-- Ensure output remains "Hello World"
-- Add comments for any complex logic (though this program is intentionally simple)
+- Ensure output includes both greeting lines
+- Add comments for any complex logic
 
 ## Testing
 Run the program and verify output:
 ```bash
 java HelloWorld
-# Expected output: Hello World
+# Expected output:
+# Hello World
+# This is the system generated greeting. Don't reply!
 ```
 
 ## Questions?
