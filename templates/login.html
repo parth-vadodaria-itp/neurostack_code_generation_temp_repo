@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Application - Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="header">
+                <h1>🏏 Cricket Application</h1>
+                <p>Please login to continue</p>
+            </div>
+            
+            <!-- Display flash messages -->
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <!-- Acceptance Criteria: Login page displays Username and Password fields -->
+            <form method="POST" action="{{ url_for('login') }}" class="login-form">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input 
+                        type="text" 
+                        id="username" 
+                        name="username" 
+                        class="form-control" 
+                        placeholder="Enter your username"
+                        autocomplete="username"
+                    >
+                </div>
+                
+                <!-- Acceptance Criteria: Password input is masked while typing -->
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        class="form-control" 
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                    >
+                </div>
+                
+                <!-- Acceptance Criteria: Login page contains a Login button -->
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+            
+            <div class="footer">
+                <p class="help-text">Demo credentials: admin/cricket123, user/password, cricket_fan/ipl2024</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
