@@ -1,108 +1,115 @@
 # Unit Converter Application
 
-A Python application for converting values between commonly used units.
+## Overview
+
+A Python command-line application for converting values between commonly used units.
 
 ## Features
 
-- **Temperature Conversion**: Celsius ↔ Fahrenheit
-- **Distance Conversion**: Kilometers ↔ Miles
-- **Weight Conversion**: Kilograms ↔ Pounds
-- **Length Conversion**: Centimeters ↔ Inches
+Supports the following conversion types:
+
+- **Temperature**: Celsius ↔ Fahrenheit
+- **Distance**: Kilometers ↔ Miles
+- **Weight**: Kilograms ↔ Pounds
+- **Length**: Centimeters ↔ Inches
 
 ## Requirements
 
 - Python 3.11 or higher
-- tkinter (included with Python standard library)
+- pip (Python package manager)
 
 ## Installation
 
 1. Clone the repository:
-```bash
-git clone https://github.com/parth-vadodaria-itp/neurostack_code_generation_temp_repo.git
-cd neurostack_code_generation_temp_repo
-```
+   ```bash
+   git clone https://github.com/parth-vadodaria-itp/neurostack_code_generation_temp_repo.git
+   cd neurostack_code_generation_temp_repo
+   ```
 
-2. (Optional) Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
+2. (Optional) Create and activate a virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-3. Install development dependencies (for testing):
-```bash
-pip install -r requirements.txt
-```
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
-### GUI Mode (Default)
+Run the application:
 
-Run the application with graphical interface:
 ```bash
 python main.py
 ```
 
-### CLI Mode
+### Example Session
 
-Run the application in command-line mode:
-```bash
-python main.py --cli
 ```
+=== Unit Converter Application ===
 
-Follow the prompts to:
-1. Select conversion type
-2. Enter the value to convert
-3. View the converted result
+Available conversion types:
+1. Celsius to Fahrenheit
+2. Fahrenheit to Celsius
+3. Kilometers to Miles
+4. Miles to Kilometers
+5. Kilograms to Pounds
+6. Pounds to Kilograms
+7. Centimeters to Inches
+8. Inches to Centimeters
+9. Exit
 
-### Examples
-
-**Temperature Conversion:**
-```
-Select conversion type: 1
-Enter value in Celsius: 25
-Result: 25.0°C = 77.0°F
-```
-
-**Distance Conversion:**
-```
-Select conversion type: 3
-Enter value in Kilometers: 10
-Result: 10.0 km = 6.21 miles
+Select conversion type (1-9): 1
+Enter value to convert: 25
+25.0 Celsius = 77.0 Fahrenheit
 ```
 
 ## Running Tests
 
+Run the test suite:
+
 ```bash
-pytest tests/ -v
+pytest
 ```
 
-With coverage report:
+Run tests with coverage:
+
 ```bash
-pytest tests/ -v --cov=converter --cov=cli --cov=gui
+pytest --cov=converters --cov=validators --cov-report=html
 ```
 
 ## Project Structure
 
 ```
 .
-├── converter/
+├── main.py                 # Application entry point
+├── converters/
 │   ├── __init__.py
-│   ├── temperature.py    # Temperature conversion logic
-│   ├── distance.py       # Distance conversion logic
-│   ├── weight.py         # Weight conversion logic
-│   └── length.py         # Length conversion logic
-├── cli.py                # Command-line interface
-├── gui.py                # Graphical user interface
-├── main.py               # Application entry point
+│   ├── temperature.py      # Temperature conversion logic
+│   ├── distance.py         # Distance conversion logic
+│   ├── weight.py           # Weight conversion logic
+│   └── length.py           # Length conversion logic
+├── validators/
+│   ├── __init__.py
+│   └── input_validator.py  # Input validation logic
 ├── tests/
 │   ├── __init__.py
 │   ├── test_temperature.py
 │   ├── test_distance.py
 │   ├── test_weight.py
-│   └── test_length.py
+│   ├── test_length.py
+│   └── test_validators.py
 ├── requirements.txt
 └── README.md
 ```
+
+## Acceptance Criteria
+
+✅ User can select conversion type from menu
+✅ Correct conversion is displayed for all supported unit types
+✅ Invalid input is handled with clear error messages
 
 ## License
 
