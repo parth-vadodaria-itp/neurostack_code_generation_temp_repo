@@ -1,67 +1,78 @@
 # Hello World Java Program
 
 ## Overview
-A simple Java program that prints "Hello World" followed by a system-generated greeting message to the console.
 
-## Story
+This is a simple Java program that prints "Hello World" to the console. It demonstrates the most basic structure of a Java application with a single file containing one function.
+
+## Story Details
+
 - **Story ID**: KAN-79
 - **Summary**: Develop Test Program
 - **Description**: Develop a program with a single file containing a simple single function printing `Hello World` in Java.
 
-## Requirements
-- Java 17 or higher
-
 ## Project Structure
+
 ```
 .
-├── HelloWorld.java    # Main program file
-├── README.md          # This file
-├── .gitignore         # Git ignore rules
-├── pom.xml            # Maven build configuration
-└── CONTRIBUTING.md    # Development guide
+├── HelloWorld.java    # Main Java source file
+└── README.md          # This file
 ```
 
-## How to Run
+## Requirements
 
-### Option 1: Using javac (Java Compiler)
+- **Java Development Kit (JDK)**: Version 8 or higher
+- No external dependencies required
+
+## Compilation
+
+To compile the program, open a terminal in the project directory and run:
+
 ```bash
-# Compile the program
 javac HelloWorld.java
+```
 
-# Run the compiled program
+This will generate a `HelloWorld.class` file in the same directory.
+
+## Execution
+
+After compilation, run the program using:
+
+```bash
 java HelloWorld
 ```
 
-### Option 2: Using Maven
-```bash
-# Compile
-mvn compile
-
-# Run
-mvn exec:java -Dexec.mainClass="HelloWorld"
-```
-
 ## Expected Output
+
 ```
 Hello World
-This is the system generated greeting. Don't reply!
+```
+
+## Quick Start (One-liner)
+
+Compile and run in a single command:
+
+```bash
+javac HelloWorld.java && java HelloWorld
 ```
 
 ## Acceptance Criteria
-✅ Source code provided (HelloWorld.java)
-✅ README documentation provided
-✅ Ready for GitHub push
 
-## Technical Details
-- **Language**: Java 17
-- **Build Tool**: Maven (optional)
-- **Dependencies**: None (standalone program)
+✅ **Source code**: `HelloWorld.java` contains a single function that prints "Hello World"  
+✅ **README**: This documentation file provides compilation and execution instructions  
+✅ **GitHub Repository**: Ready to be pushed to `https://github.com/parth-vadodaria-itp/neurostack_code_generation_temp_repo`
 
-## Development
-This is a minimal Java program with:
-- One file: `HelloWorld.java`
-- One function: `printHelloWorld()`
-- Output: Two lines of text
+## Code Explanation
+
+The program consists of:
+
+1. **Class Declaration**: `public class HelloWorld` - defines the main class
+2. **Main Method**: `public static void main(String[] args)` - the entry point of any Java application
+3. **Print Statement**: `System.out.println("Hello World")` - outputs the text to the console
 
 ## License
-Proprietary - My Software Team (KAN Project)
+
+This is a simple demonstration program created for educational purposes.
+
+## Author
+
+Generated for story KAN-79 - My Software Team
